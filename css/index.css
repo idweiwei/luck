@@ -1,0 +1,361 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body,
+html {
+  max-width: 700px;
+  min-height: 13.34rem;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+html {
+  background: #fff;
+}
+body {
+  background: rgba(219, 209, 244, 0.6);
+}
+@media only screen and (device-width: 375px) and (device-height: 812px) {
+}
+/* 跑马灯 */
+.Twinkle {
+  background-image: url(../img/Twinkle.png);
+}
+.Twinkle2 {
+  background-image: url(../img/Twinkle2.png);
+}
+.box {
+  width: 100%;
+  height: 100%;
+  font-size: 0.32rem;
+  background-image: url(../img/boxBg.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+  /* 公告轮播 */
+  /* 规则 */
+  /* 外边框 */
+  /* 跑马灯 */
+  /* 九宫格 */
+  /* 活动解释 */
+  /* 我的奖品 */
+}
+.box li {
+  list-style: none;
+}
+.box .news {
+  height: 35px;
+  overflow: hidden;
+  width: 5.5rem;
+  border-radius: 0.5rem;
+  background: rgba(0, 0, 0, 0.48);
+  line-height: 35px;
+  float: left;
+  margin: 0.1rem 0 0 0.1rem;
+}
+.box .news .t_news {
+  height: 20px;
+  color: #fff;
+  margin-top: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.box .news .t_news .news_li,
+.box .news .t_news .swap {
+  line-height: 20px;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0.2rem;
+  font-size: 14px;
+  text-align: left;
+  color: #fff;
+}
+.box .news .t_news .news_li em,
+.box .news .t_news .swap em {
+  font-style: normal;
+  color: #fff430;
+  margin-left: 1em;
+}
+.box .news .t_news .swap {
+  top: 20px;
+}
+.box .rules_btn {
+  width: 0.9rem;
+  height: 0.76rem;
+  position: absolute;
+  top: 0;
+  right: 0.4rem;
+  background: url("../img/rules.png") no-repeat;
+  background-size: 100%;
+}
+.box img {
+  display: block;
+  margin: 0 auto;
+}
+.box .outside {
+  position: absolute;
+  width: 6.4rem;
+  height: 6rem;
+  left: 50.6%;
+  top: 4.5rem;
+  transform: translateX(-50%);
+  background: #ff356b;
+  border-radius: 0.2rem;
+  box-shadow: 0 4px 0 0 #eb0c48;
+}
+.box .Twinkle,
+.box .Twinkle2 {
+  position: absolute;
+  width: 6.22rem;
+  height: 5.9rem;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  left: 50.6%;
+  top: 4.6rem;
+  transform: translateX(-50%);
+}
+.box .play {
+  position: absolute;
+  width: 5.8rem;
+  height: 5.34rem;
+  left: 50.6%;
+  top: 4.8rem;
+  background: #e7003e;
+  transform: translateX(-50%);
+  border-radius: 0.2rem;
+}
+.box .play li {
+  position: relative;
+  float: left;
+  margin: 0.11rem 0 0 0.08rem;
+  width: 1.82rem;
+  height: 1.64rem;
+  border-radius: 0.2rem;
+  background: url("../img/liBg.png") no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+.box .play li .btn_span {
+  font-size: 0.21rem;
+  color: #f5d220;
+}
+.box .play li .btn_span em {
+  font-style: normal;
+}
+.box .play li img {
+  display: block;
+}
+.box .play li p {
+  display: none;
+}
+.box .play .select {
+  background: #f5d220 !important;
+}
+.box .explain {
+  width: 100%;
+  position: absolute;
+  left: 50.6%;
+  top: 10.7rem;
+  transform: translateX(-50%);
+}
+.box .explain p {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 0.22rem;
+  text-align: left;
+  line-height: 0.3rem;
+}
+.box .prize_btn {
+  width: 2rem;
+  height: 0.6rem;
+  text-align: center;
+  line-height: 0.6rem;
+  border-radius: 0.5rem;
+  position: absolute;
+  left: 50.6%;
+  top: 12rem;
+  transform: translateX(-50%);
+  font-size: 0.26rem;
+  background: #ff356b;
+  color: #fff;
+}
+/* 中奖提示 */
+.mask {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.mask .mask_box {
+  width: 5.3rem;
+  height: calc(100% - 2.4rem);
+  margin: 1.4rem auto 0;
+  background: url("../img/prizeimg.png") no-repeat;
+  background-size: 100%;
+  box-sizing: border-box;
+  padding-top: 2.8rem;
+}
+.mask .mask_prize {
+  font-size: 0.3rem;
+  width: 100%;
+  text-align: center;
+  display: block;
+  margin-bottom: 2.8rem;
+}
+.mask .mask_name {
+  background: url("../img/name.png") no-repeat left 4px center #ffffff;
+  background-size: 0.25rem;
+}
+.mask .mask_phone {
+  background: url("../img/phone.png") no-repeat left 4px center #ffffff;
+  background-size: 0.2rem 0.25rem;
+}
+.mask .mask_address {
+  background: url("../img/address.png") no-repeat left 6px center #ffffff;
+  background-size: 0.18rem 0.26rem;
+}
+.mask .mask_btn {
+  display: block;
+  width: 1.8rem;
+  height: 0.5rem;
+  background: linear-gradient(#ffaec5, #ff749a, #ff4275);
+  line-height: 0.6rem;
+  text-align: center;
+  border-radius: 0.4rem;
+  margin: 0.4rem auto 0;
+  color: #fff;
+  font-size: 0.23rem;
+}
+.mask .mask_close {
+  display: block;
+  width: 0.6rem;
+  height: 0.6rem;
+  background: url("../img/mask_close.png") no-repeat;
+  background-size: 100%;
+  border-radius: 50%;
+  margin: 1rem auto 0;
+}
+.mask input {
+  width: 4rem;
+  height: 0.52rem;
+  text-indent: 0.4rem;
+  vertical-align: middle;
+  font-size: 0.2rem;
+  color: #000;
+  margin: 0.24rem auto;
+  display: block;
+}
+/* 规则说明 */
+.rules {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.rules .rulesBox {
+  left: 0;
+  top: 0;
+  width: 5.3rem;
+  height: calc(100% - 2.4rem);
+  margin: 1.4rem auto 0;
+  background: url("../img/rulesbxoBg.png") no-repeat;
+  background-size: 100%;
+  box-sizing: border-box;
+  padding-top: 2.8rem;
+}
+.rules .rulesBox .rules_know {
+  display: block;
+  width: 1.8rem;
+  height: 0.5rem;
+  background: linear-gradient(#ffaec5, #ff749a, #ff4275);
+  line-height: 0.6rem;
+  text-align: center;
+  border-radius: 0.4rem;
+  margin: 6.1rem auto 0;
+  color: #fff;
+  font-size: 0.23rem;
+}
+/* 奖品信息提交成功 */
+.success {
+  width: 100%;
+  height: 100%;
+  background: url("../img/successBg.png") no-repeat;
+  background-size: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.success .success_close {
+  display: block;
+  width: 0.6rem;
+  height: 0.6rem;
+  background: url("../img/mask_close.png") no-repeat;
+  background-size: 100%;
+  border-radius: 50%;
+  margin: 7rem auto 0;
+}
+/* 中奖纪录 */
+.record {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.record .recordBox {
+  width: 5.3rem;
+  height: calc(100% - 2.4rem);
+  margin: 1.4rem auto 0;
+  background: url("../img/recordBg.png") no-repeat;
+  background-size: 100%;
+  box-sizing: border-box;
+  padding-top: 2.8rem;
+}
+.record .recordBox .recordTxt {
+  width: 70%;
+  height: 4rem;
+  overflow-y: scroll;
+  color: #666;
+  position: absolute;
+  top: 3.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+}
+.record .recordBox .recordTxt .go {
+  width: 100%;
+  height: 2rem;
+  text-align: center;
+  line-height: 2rem;
+}
+.record .recordBox .recordTxt p {
+  font-size: 0.2rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+}
+.record .recordBox .recordTxt p span:nth-child(1) {
+  float: left;
+  margin-left: 0.4rem;
+}
+.record .recordBox .recordTxt p span:nth-child(2) {
+  float: right;
+  margin-right: 0.8rem;
+}
+.record .recordBox .record_close {
+  display: block;
+  width: 0.6rem;
+  height: 0.6rem;
+  background: url("../img/mask_close.png") no-repeat;
+  background-size: 100%;
+  border-radius: 50%;
+  margin: 6.2rem auto 0;
+}

@@ -1,0 +1,428 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  max-width: 700px;
+  min-height: 13.34rem;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+html {
+  background: #fff;
+}
+
+body {
+  background: rgba(219, 209, 244, .6);
+}
+
+@media only screen and (device-width: 375px) and (device-height: 812px)  {
+  // iphoneX css部分
+
+
+}
+
+/* 跑马灯 */
+.Twinkle {
+  background-image: url(../img/Twinkle.png);
+}
+
+.Twinkle2 {
+  background-image: url(../img/Twinkle2.png);
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  font-size: .32rem;
+  background-image: url(../img/boxBg.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+
+
+  /* 公告轮播 */
+
+  li {
+    list-style: none;
+  }
+
+  .news {
+    height: 35px;
+    overflow: hidden;
+    width: 5.50rem;
+    border-radius: .50rem;
+    background: rgba(0, 0, 0, .48);
+    line-height: 35px;
+    float: left;
+    margin: .10rem 0 0 .10rem;
+
+    .t_news {
+      height: 20px;
+      color: #fff;
+      margin-top: 10px;
+      overflow: hidden;
+      position: relative;
+
+      .news_li, .swap {
+        line-height: 20px;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: .20rem;
+        font-size: 14px;
+        text-align: left;
+        color: #fff;
+
+        em {
+          font-style: normal;
+          color: #fff430;
+          margin-left: 1em;
+        }
+      }
+
+      .swap {
+        top: 20px;
+      }
+    }
+  }
+
+  /* 规则 */
+
+  .rules_btn {
+    width: .90rem;
+    height: .76rem;
+    position: absolute;
+    top: 0;
+    right: .40rem;
+    background: url("../img/rules.png") no-repeat;
+    background-size: 100%;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* 外边框 */
+
+  .outside {
+    position: absolute;
+    width: 6.40rem;
+    height: 6.00rem;
+    left: 50.6%;
+    top: 4.50rem;
+    transform: translateX(-50%);
+    background: #ff356b;
+    border-radius: .2rem;
+    box-shadow: 0 4px 0 0 #eb0c48;
+
+  }
+
+  /* 跑马灯 */
+
+  .Twinkle, .Twinkle2 {
+    position: absolute;
+    width: 6.22rem;
+    height: 5.90rem;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    left: 50.6%;
+    top: 4.60rem;
+    transform: translateX(-50%);
+
+  }
+
+
+  /* 九宫格 */
+
+  .play {
+    position: absolute;
+    width: 5.80rem;
+    height: 5.34rem;
+    left: 50.6%;
+    top: 4.80rem;
+    background: #e7003e;
+    transform: translateX(-50%);
+    border-radius: .2rem;
+
+    li {
+      position: relative;
+      float: left;
+      margin: .11rem 0 0 .08rem;
+      width: 1.82rem;
+      height: 1.64rem;
+      border-radius: .20rem;
+      background: url("../img/liBg.png") no-repeat;
+      background-size: cover;
+      text-align: center;
+
+      .btn_span {
+        font-size: .21rem;
+        color: #f5d220;
+
+        em {
+          font-style: normal;
+        }
+      }
+
+      img {
+        display: block;
+      }
+
+      p {
+        display: none;
+      }
+
+    }
+
+    .select {
+      background: #f5d220 !important;
+    }
+  }
+
+  /* 活动解释 */
+
+  .explain {
+    width: 100%;
+    position: absolute;
+    left: 50.6%;
+    top: 10.70rem;
+    transform: translateX(-50%);
+
+
+    p {
+      width: 80%;
+      margin: 0 auto;
+      font-size: .22rem;
+      text-align: left;
+      line-height: .30rem;
+    }
+
+  }
+
+  /* 我的奖品 */
+
+  .prize_btn {
+
+    width: 2.00rem;
+    height: .60rem;
+    text-align: center;
+    line-height: .60rem;
+    border-radius: .50rem;
+    position: absolute;
+    left: 50.6%;
+    top: 12.00rem;
+    transform: translateX(-50%);
+    font-size: .26rem;
+    background: #ff356b;
+    color: #fff;
+  }
+
+}
+
+/* 中奖提示 */
+.mask {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .60);
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  .mask_box {
+    width: 5.30rem;
+    height: calc(100% - 2.40rem);
+    margin: 1.40rem auto 0;
+    background: url("../img/prizeimg.png") no-repeat;
+    background-size: 100%;
+    box-sizing: border-box;
+    padding-top: 2.80rem;
+  }
+
+  .mask_prize {
+    font-size: .30rem;
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin-bottom: 2.80rem;
+  }
+
+  .mask_name {
+    background: url("../img/name.png") no-repeat left 4px center rgba(255, 255, 255, 1);
+    background-size: .25rem;
+  }
+
+  .mask_phone {
+    background: url("../img/phone.png") no-repeat left 4px center rgba(255, 255, 255, 1);
+    background-size: .20rem .25rem;
+  }
+
+  .mask_address {
+    background: url("../img/address.png") no-repeat left 6px center rgba(255, 255, 255, 1);
+    background-size: .18rem .26rem;
+  }
+
+  //提交按钮
+  .mask_btn {
+    display: block;
+    width: 1.80rem;
+    height: .50rem;
+    background: linear-gradient(#ffaec5, #ff749a, #ff4275);;
+    line-height: .60rem;
+    text-align: center;
+    border-radius: .40rem;
+    margin: .40rem auto 0;
+    color: #fff;
+    font-size: .23rem;
+  }
+
+  //关闭按钮
+  .mask_close {
+    display: block;
+    width: .60rem;
+    height: .60rem;
+    background: url("../img/mask_close.png") no-repeat;
+    background-size: 100%;
+    border-radius: 50%;
+    margin: 1.00rem auto 0;
+  }
+
+
+  input {
+    width: 4.00rem;
+    height: .52rem;
+    text-indent: .40rem;
+    vertical-align: middle;
+    font-size: .20rem;
+    color: #000;
+    margin: .24rem auto;
+    display: block;
+  }
+}
+
+/* 规则说明 */
+.rules {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .60);
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  .rulesBox {
+    left: 0;
+    top: 0;
+    width: 5.30rem;
+    height: calc(100% - 2.40rem);
+    margin: 1.40rem auto 0;
+    background: url("../img/rulesbxoBg.png") no-repeat;
+    background-size: 100%;
+    box-sizing: border-box;
+    padding-top: 2.80rem;
+
+    .rules_know {
+      display: block;
+      width: 1.80rem;
+      height: .50rem;
+      background: linear-gradient(#ffaec5, #ff749a, #ff4275);;
+      line-height: .60rem;
+      text-align: center;
+      border-radius: .40rem;
+      margin: 6.10rem auto 0;
+      color: #fff;
+      font-size: .23rem;
+    }
+  }
+}
+
+/* 奖品信息提交成功 */
+.success {
+  width: 100%;
+  height: 100%;
+  background: url("../img/successBg.png") no-repeat;
+  background-size: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  .success_close {
+    display: block;
+    width: .60rem;
+    height: .60rem;
+    background: url("../img/mask_close.png") no-repeat;
+    background-size: 100%;
+    border-radius: 50%;
+    margin: 7.00rem auto 0;
+  }
+}
+
+/* 中奖纪录 */
+.record {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .60);
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  .recordBox {
+    width: 5.30rem;
+    height: calc(100% - 2.40rem);
+    margin: 1.40rem auto 0;
+    background: url("../img/recordBg.png") no-repeat;
+    background-size: 100%;
+    box-sizing: border-box;
+    padding-top: 2.80rem;
+
+    .recordTxt {
+      width: 70%;
+      height: 4.00rem;
+      overflow-y: scroll;
+      color: #666;
+      position: absolute;
+      top: 3.6rem;
+      left: 50%;
+      transform: translateX(-50%);
+      box-sizing: border-box;
+
+      .go {
+        width: 100%;
+        height: 2.00rem;
+        text-align: center;
+        line-height: 2.00rem;
+      }
+
+      p {
+        font-size: .20rem;
+        height: .40rem;
+        line-height: .40rem;
+
+        span:nth-child(1) {
+          float: left;
+          margin-left: .40rem;
+        }
+
+        span:nth-child(2) {
+          float: right;
+          margin-right: .80rem;
+        }
+      }
+    }
+
+    .record_close {
+      display: block;
+      width: .60rem;
+      height: .60rem;
+      background: url("../img/mask_close.png") no-repeat;
+      background-size: 100%;
+      border-radius: 50%;
+      margin: 6.20rem auto 0;
+    }
+  }
+}

@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>小乖乖写的抽奖</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/rem.js"></script>
+    <script src="js/index.js"></script>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div class="box">
+    <!-- 公告轮播 -->
+    <div class="news">
+        <div class="t_news">
+            <ul class="news_li">
+                <li>恭喜发友【<span>lemon</span>】获得<em>么么哒一个</em></li>
+                <li>恭喜发友【<span>柠檬精酸酸</span>】获得<em>2019祝福一条</em></li>
+                <li>恭喜发友【<span>根号3</span>】获得<em>2020女朋友一枚</em></li>
+                <li>恭喜发友【<span>小动物༢</span>】获得<em>《爱的魔力转圈圈》一首</em></li>
+                <li>恭喜发友【<span>大路朝天</span>】获得<em>比心三次</em></li>
+                <li>恭喜发友【<span>i'm ok</span>】获得<em>《爱的魔力转圈圈》一首</em></li>
+                <li>恭喜发友【<span>V.X.X</span>】获得<em>远程安慰一次</em></li>
+                <li>恭喜发友【<span>猪猪女孩，</span>】获得<em>比心三次</em></li>
+                <li>恭喜发友【<span>蟹黄堡</span>】获得<em>远程安慰一次</em></li>
+                <li>恭喜发友【<span>盐系欧尼OvO</span>】获得<em>比心三次</em></li>
+            </ul>
+            <ul class="swap"></ul>
+        </div>
+    </div>
+
+    <!-- 规则 -->
+    <div class="rules_btn" onclick="$('#rules').fadeIn();"></div>
+
+    <!-- 跑马灯外框 -->
+    <div class="outside"></div>
+
+    <!-- 跑马灯 -->
+    <div class="Twinkle" id="Twinkle"></div>
+
+    <!--九宫格-->
+    <ul class="play clearfix">
+        <li class="prize select" data-id="0">
+            <img src="img/icon1.png" style="width: 1.19rem;height: 1.11rem;margin-top: .20rem;"/>
+            <div>
+                <p>么么哒一个</p> <!-- 奖品名称 为了备注用的 css'已经隐藏啦放心 -->
+            </div>
+        </li>
+        <li class="prize" data-id="1">
+            <img src="img/icon2.png" style="width: 1.66rem;height: 1.08rem;margin-top: .20rem;"/>
+            <div>
+                <p>拥抱一个</p>
+            </div>
+        </li>
+        <li class="prize" data-id="2">
+            <img src="img/icon3.png" style="width: 1.47rem;height: 1.06rem;margin-top: .22rem;"/>
+            <div>
+                <p>2019祝福一条</p>
+            </div>
+        </li>
+        <li class="prize" data-id="3">
+            <img src="img/icon4.png" style="width: 1.28rem;height: 1.27rem;margin-top: .10rem;"/>
+            <div>
+                <p>2020女朋友一枚</p>
+            </div>
+        </li>
+        <!--开始按钮-->
+        <li id="btn" style="height: 1.40rem;cursor: pointer">
+            <img src="img/icon5.png" style="width: 1.82rem;height: 1.40rem;"/>
+            <span class="btn_span">剩余<em id="change">99</em>次抽奖机会</span>
+        </li>
+        <!--开始按钮-->
+        <li class="prize" data-id="4">
+            <img src="img/icon6.png" style="width: 1.09rem;height: 1.40rem;"/>
+            <div>
+                <p>比心三次</p>
+            </div>
+        </li>
+        <li class="prize" data-id="5">
+            <img src="img/icon7.png" style="width: 1.71rem;height: 1.08rem;;margin-top: .22rem;"/>
+            <div>
+                <p>远程安慰一次</p>
+            </div>
+        </li>
+        <li class="prize" data-id="6">
+            <img src="img/icon8.png" style="width: 1.73rem;height: 1.07rem;;margin-top: .22rem;"/>
+            <div>
+                <p>撒娇五枚</p>
+            </div>
+        </li>
+        <li class="prize" data-id="7">
+            <img src="img/icon9.png" style="width: 1.63rem;height: 1.08rem;;margin-top: .22rem;"/>
+            <div>
+                <p>《爱的魔力转圈圈》一首</p>
+            </div>
+        </li>
+    </ul>
+
+    <!-- 活动解释 -->
+    <div class="explain">
+        <p>① 本次活动最终解释权归我所有。</p>
+        <p>② 本小仙女の微信：idweiwei2011</p>
+    </div>
+
+    <!-- 我的奖品 -->
+    <button class="prize_btn" id="prize_btn">我的奖品</button>
+
+</div>
+
+<!--中奖提示-->
+<div class="mask" id="mask" style="display: none;">
+    <div class="mask_box">
+        <span class="mask_prize">小米电动平衡车</span>
+        <input type="text" class="mask_name" placeholder="小乖乖の昵称">
+        <input type="text" class="mask_phone" placeholder="小乖乖の联系方式" required="required">
+        <input type="text" class="mask_address" placeholder="抱抱小乖乖の地址">
+        <button type="button" class="mask_btn" id="mask_btn">提交</button>
+        <span class="mask_close" onclick="$('#mask').fadeOut();"></span>
+    </div>
+</div>
+
+<!-- 规则说明 -->
+<div class="rules" id="rules" style="display: none">
+    <div class="rulesBox" id="rulesBox">
+        <button type="button" class="rules_know" onclick="$('#rules').fadeOut();">知道了</button>
+
+    </div>
+</div>
+
+<!-- 奖品信息提交成功 -->
+<div class="success" id="success" style="display: none">
+    <span class="success_close" onclick="$('#success').fadeOut();"></span>
+</div>
+
+
+<!-- 中奖纪录 -->
+<div class="record" id="record" style="display: none">
+    <div class="recordBox">
+        <div class="recordTxt" id="recordTxt">
+            <div class="go" id="go"
+                 style="display: none;font-size: .24rem;width: 100%;text-align: center;line-height: .60rem">小乖乖，快去抽奖玩耍呀！
+            </div>
+        </div>
+        <span class="record_close" onclick="$('#record').fadeOut();"></span>
+    </div>
+</div>
+
+<script>
+
+    /* 键盘弹起 页面底部留白 处理 */
+    $("input").on("blur", function () {
+        window.scroll(0, 0); //失焦后强制让页面归位
+    });
+
+
+    //跑马灯效果
+    var num = 0;
+    $("#Twinkle").attr("class", function () {
+        var _this = $(this);
+        setInterval(function () {
+            num++;
+            if (num % 2 == 0) {
+                _this.addClass("Twinkle2");
+            } else {
+                _this.addClass("Twinkle");
+                _this.removeClass('Twinkle2');
+            }
+        }, 500)
+    })
+
+
+    //公告轮播
+    $('.swap').html($('.news_li').html());
+    x = $('.news_li');
+    y = $('.swap');
+    h = $('.news_li li').length * 20; //20为每个li的高度
+    var hh = $('.news_li li').length;
+    if (hh > 1)
+    //setTimeout(b,3000);//滚动间隔时间 现在是3秒
+        b();
+    b();
+
+    function b() {
+        t = parseInt(x.css('top'));
+        //alert(t)
+        y.css('top', '20px');
+        x.animate({
+            top: t - 20 + 'px'
+        }, 'slow'); //20为每个li的高度
+        if (Math.abs(t) == h - 20) { //20为每个li的高度
+            y.animate({
+                top: '0px'
+            }, 'slow');
+            z = x;
+            x = y;
+            y = z;
+        }
+        setTimeout(b, 3000); //滚动间隔时间 现在是3秒
+    }
+
+
+</script>
+</body>
+</html>
